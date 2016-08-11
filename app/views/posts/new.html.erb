@@ -1,0 +1,16 @@
+<%= form_for @post do | f |  %>
+	<div>
+		<%= f.label :title  %>
+		<%= f.text_field  :title %>		
+	</div>
+
+	<div>
+		<%= f.label :gif_url  %>
+		<%= f.text_field :gif_url  %>		
+	</div>
+
+	<div>
+		<%= f.collection_check_boxes :label_ids, Label.all, :id, :name  %>
+	</div>
+	<%= f.submit  %>
+<% end %>

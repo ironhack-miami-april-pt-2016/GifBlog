@@ -1,0 +1,10 @@
+<%= link_to("Sorted by votes", '/posts/sorted-by-votes')  %>
+<%= link_to("Lower than 4 votes", '/posts/low-rated')  %>
+<%= link_to("Sorted By Date", '/posts/sorted-by-date')  %>
+
+<% @posts.each do |post| %>
+	<h3><%= post.title  %></h3>	
+	<%= image_tag(post.gif_url)  %>
+
+	<%= link_to "SEE POST!!", post_path(post) %>
+<% end %>
